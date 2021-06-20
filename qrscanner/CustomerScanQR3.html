@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon1.png">
+    <title>SHOPLIFY : e-Restaurant</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link href="../assets/css/pages/chat-app-page.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="../assets/css/colors/default.css" id="theme" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body style="padding-top:0px">
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+     
+
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+
+              
+                <!-- ============================================================== -->
+                <!-- Start User Right Info -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="container" id="QR-Code">
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center">
+
+                                            <div class="col-12">
+                                                <select class="form-control" id="camera-select" style="width:inherit;"></select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <button title="Decode Image" style="visibility:hidden" class="btn btn-default btn-sm" id="decode-img" type="button" data-toggle="tooltip"><span class="glyphicon glyphicon-upload"></span></button>
+                                                <button title="Image shoot" style="visibility:hidden" class="btn btn-info btn-sm disabled" id="grab-img" type="button" data-toggle="tooltip"><span class="glyphicon glyphicon-picture"></span></button>
+                                                <button title="Play" class="btn btn-info" id="play" type="button" data-toggle="tooltip">SCAN</button>
+                                                <button title="Pause" style="visibility:hidden" class="btn btn-warning btn-sm" id="pause" type="button" data-toggle="tooltip"><span class="glyphicon glyphicon-pause"></span></button>
+                                                <button title="Stop streams" style="visibility:hidden" class="btn btn-danger btn-sm" id="stop" type="button" data-toggle="tooltip"><span class="glyphicon glyphicon-stop"></span></button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="panel-body text-center">
+                                        <div class="col-md-12">
+                                            <div class="well" style="position: relative;display: inline-block;width:inherit">
+                                                <canvas width="320" height="240" id="webcodecam-canvas" style="width:inherit"></canvas>
+                                                <div class="scanner-laser laser-rightBottom" style="opacity: 0.5;"></div>
+                                                <div class="scanner-laser laser-rightTop" style="opacity: 0.5;"></div>
+                                                <div class="scanner-laser laser-leftBottom" style="opacity: 0.5;"></div>
+                                                <div class="scanner-laser laser-leftTop" style="opacity: 0.5;"></div>
+
+                                            </div>
+
+                                            <div class="thumbnail" id="result">
+                                                <div class="caption">
+                                                    <h3>Scanned result</h3>
+                                                    <p id="scanned-QR"></p>
+                                                </div>
+                                                <div class="well" style="overflow: hidden;">
+                                                    <img id="scanned-img" src="qrcode.jpg" style="width:100%;height:100%">
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+      
+            <script type="text/javascript" src="js/filereader.js"></script>
+            <script type="text/javascript" src="js/qrcodelib.js"></script>
+            <script type="text/javascript" src="js/webcodecamjs.js"></script>
+            <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
